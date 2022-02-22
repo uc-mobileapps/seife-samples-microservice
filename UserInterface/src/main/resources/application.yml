@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+vaadin:
+  whitelisted-packages: com/weebmeister,com/uc_mobileapps
+  compatibilityMode: false
+
+rest:  # see e.g. TripClient.java
+  client:
+    apilevel: v1
+
+feign:
+  autoconfiguration:  # support pageable serialization
+    jackson:          # https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/#spring-data-support
+      enabled: true

@@ -1,0 +1,9 @@
+#macro(METHOD_PARAMETERS $method)
+    #foreach($parameter in ${method.parameters})${importContext.addImport(${parameter.type.name})}
+        ${parameter.type.simpleName} ${parameter.name}#if($foreach.hasNext),#end #end
+#end
+#macro( METHOD_DECLARATION $method )
+${method.returnType.simpleName} $method(#METHOD_PARAMETERS($method))#end
+#macro(FEIGN_CLIENT_ANNOTATION $method)
+
+#end

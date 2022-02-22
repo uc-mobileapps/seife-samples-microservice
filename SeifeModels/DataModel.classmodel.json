@@ -1,0 +1,253 @@
+{
+  "com.uc_mobileapps.examples.entities.Trip": {
+    "sqlTablename": "",
+    "description": "",
+    "properties": [
+      {
+        "attributeName": "address",
+        "type": {
+          "flags": 48,
+          "name": "com.uc_mobileapps.examples.entities.Address",
+          "simpleName": "Address",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "com.uc_mobileapps.examples.entities.Address",
+        "version": 0
+      },
+      {
+        "attributeName": "destination",
+        "type": {
+          "flags": 50,
+          "name": "java.lang.String",
+          "simpleName": "String",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "constraints": [
+          "@javax.validation.constraints.NotEmpty"
+        ],
+        "qualifiedName": "java.lang.String",
+        "version": 0
+      },
+      {
+        "attributeName": "distanceKm",
+        "type": {
+          "flags": 8,
+          "name": "float",
+          "simpleName": "float",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": true,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "constraints": [
+          "@javax.validation.constraints.Size(min=0, max=5)"
+        ],
+        "qualifiedName": "float",
+        "version": 0
+      },
+      {
+        "attributeName": "source",
+        "type": {
+          "flags": 50,
+          "name": "java.lang.String",
+          "simpleName": "String",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "constraints": [
+          "@javax.validation.constraints.NotBlank"
+        ],
+        "qualifiedName": "java.lang.String",
+        "version": 0
+      },
+      {
+        "attributeName": "tripStart",
+        "type": {
+          "flags": 50,
+          "name": "java.time.LocalDateTime",
+          "simpleName": "LocalDateTime",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "java.time.LocalDateTime",
+        "version": 0
+      },
+      {
+        "attributeName": "visitedCustomer",
+        "type": {
+          "flags": 48,
+          "name": "com.uc_mobileapps.examples.entities.Customer",
+          "simpleName": "Customer",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "com.uc_mobileapps.examples.entities.Customer",
+        "version": 0
+      }
+    ],
+    "methods": [],
+    "packageName": "com.uc_mobileapps.examples.entities",
+    "className": "Trip",
+    "generatorOptionsOfAnnotation": [
+      "filter.entityFilterVO=com.uc_mobileapps.examples.filters.TripFilterVO"
+    ],
+    "qualifiedName": "com.uc_mobileapps.examples.entities.Trip",
+    "version": 0
+  },
+  "com.uc_mobileapps.examples.entities.Customer": {
+    "sqlTablename": "",
+    "description": "",
+    "properties": [
+      {
+        "attributeName": "active",
+        "type": {
+          "flags": 8,
+          "name": "boolean",
+          "simpleName": "boolean",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "boolean",
+        "version": 0
+      },
+      {
+        "attributeName": "address",
+        "type": {
+          "flags": 48,
+          "name": "com.uc_mobileapps.examples.entities.Address",
+          "simpleName": "Address",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "com.uc_mobileapps.examples.entities.Address",
+        "version": 0
+      },
+      {
+        "attributeName": "firstName",
+        "type": {
+          "flags": 50,
+          "name": "java.lang.String",
+          "simpleName": "String",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "java.lang.String",
+        "version": 0
+      },
+      {
+        "attributeName": "lastName",
+        "type": {
+          "flags": 50,
+          "name": "java.lang.String",
+          "simpleName": "String",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": true,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "java.lang.String",
+        "version": 0
+      },
+      {
+        "attributeName": "password",
+        "type": {
+          "flags": 50,
+          "name": "java.lang.String",
+          "simpleName": "String",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "java.lang.String",
+        "version": 0
+      },
+      {
+        "attributeName": "premium",
+        "type": {
+          "flags": 50,
+          "name": "java.lang.Boolean",
+          "simpleName": "Boolean",
+          "typeArguments": []
+        },
+        "description": "",
+        "mandatory": false,
+        "primaryKey": false,
+        "sqlUniqueGroup": [],
+        "sqlIndex": [],
+        "sqlAutoIncrement": true,
+        "prefix": "",
+        "qualifiedName": "java.lang.Boolean",
+        "version": 0
+      }
+    ],
+    "methods": [],
+    "packageName": "com.uc_mobileapps.examples.entities",
+    "className": "Customer",
+    "generatorOptionsOfAnnotation": [],
+    "qualifiedName": "com.uc_mobileapps.examples.entities.Customer",
+    "version": 0
+  }
+}

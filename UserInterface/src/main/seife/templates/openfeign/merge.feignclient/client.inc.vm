@@ -1,0 +1,30 @@
+## (c) 2016-2022 Klaus Sausen https://uc-mobileapps.com - all rights reserved
+#set($RequestMapping='org.springframework.web.bind.annotation.RequestMapping')
+#set($RequestBody='org.springframework.web.bind.annotation.RequestBody')
+#set($RequestParam='org.springframework.web.bind.annotation.RequestParam')
+#set($PathVariable='org.springframework.web.bind.annotation.PathVariable')
+${importContext.addImport($RequestBody)}##
+${importContext.addImport($RequestMapping)}##
+
+#foreach ($method in ${sourcemodel.methods}) #set($annotation=${method.getAnnotation($RequestMapping)})##
+#if(${annotation.hasAttribute("method")})
+	@RequestMapping(value = "${annotation.getValue().replace($sourcemodel_prefix, $sourcemodel_replacement)}", method = RequestMethod.${annotation.firstValueByName("method").enumDescriptor.value})
+#else
+	@RequestMapping(value = "${annotation.getValue().replace($sourcemodel_prefix, $sourcemodel_replacement)}")
+#end
+	${method.returnType.getGenericsName($importContext)} $method(${importContext.addImport(${method.returnType.name})}##
+#foreach($parameter in ${method.parameters})${importContext.addImport(${parameter.type.name})}##
+	#if(${parameter.type.simpleName} == 'Pageable')##
+@SpringQueryMap ${importContext.addImport('org.springframework.cloud.openfeign.SpringQueryMap')}##
+	#elseif(${parameter.hasAnnotation($RequestParam)})##
+@RequestParam ${importContext.addImport($RequestParam)}##
+	#elseif(${parameter.hasAnnotation($RequestBody)})##
+@RequestBody ##
+	#end
+	#if(${parameter.hasAnnotation($PathVariable)})##
+@PathVariable("${parameter.name}") ${importContext.addImport($PathVariable)}##
+	#end
+${parameter.type.simpleName} ${parameter.name}#if($foreach.hasNext), #end##
+#end);
+
+#end

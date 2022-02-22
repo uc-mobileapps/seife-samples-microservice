@@ -1,0 +1,8 @@
+#macro (propertychain $binding)
+#if (${binding.propertyPath.size()} <= 1)entity.${binding.referredProperty.getter}()#else
+Optional.ofNullable(entity.#foreach ($property in $binding.propertyPath)${property.getter}())#if($foreach.hasNext).map(p -> p.#end#end.orElse(null)#end#end
+		${binding.attributeName} = addComponentColumn(entity -> {
+				Checkbox cb = new Checkbox(#propertychain($binding));
+				cb.setEnabled(false);
+				return cb;
+			});

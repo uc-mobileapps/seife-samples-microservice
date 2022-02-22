@@ -1,0 +1,18 @@
+## (c) 2016-2022 Klaus Sausen, https://uc-mobileapps.com - all rights reserved
+package ${servicemodel.packageName};
+${importContext.addImport("org.springframework.cloud.openfeign.FeignClient")}
+
+#foreach ($import in $importContext.imports)
+import ${import};
+#end
+
+/**
+ * This template is used for the imports and if the class does not yet exist. It is also usable to generate another
+ * target class and adjust that after creation.
+ */
+public interface ${servicemodel.className} {
+
+	// @seife automatically generated:
+#parse("client.inc.vm")
+	// @seife auto-code end
+}

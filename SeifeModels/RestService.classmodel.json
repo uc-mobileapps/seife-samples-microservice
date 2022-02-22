@@ -1,0 +1,1294 @@
+{
+  "com.uc_mobileapps.examples.rest.TripController": {
+    "sqlTablename": "",
+    "description": "",
+    "properties": [],
+    "methods": [
+      {
+        "methodName": "listTrips",
+        "returnType": {
+          "flags": 112,
+          "name": "org.springframework.data.domain.Page",
+          "simpleName": "Page",
+          "typeArguments": [
+            {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.entities.Trip",
+              "simpleName": "Trip",
+              "typeArguments": []
+            }
+          ]
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/trips/page"
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "method",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 48,
+              "name": "org.springframework.data.domain.Pageable",
+              "simpleName": "Pageable",
+              "typeArguments": []
+            },
+            "name": "pageable",
+            "annotations": [
+              {
+                "name": "org.springframework.data.web.PageableDefault",
+                "simpleName": "PageableDefault",
+                "annotationInfos": [
+                  {
+                    "name": "page",
+                    "value": 0
+                  },
+                  {
+                    "name": "size",
+                    "value": 20
+                  },
+                  {
+                    "name": "value",
+                    "value": 10
+                  },
+                  {
+                    "name": "sort",
+                    "value": []
+                  }
+                ]
+              },
+              {
+                "name": "org.springframework.data.web.SortDefault.SortDefaults",
+                "simpleName": "SortDefaults",
+                "annotationInfos": [
+                  {
+                    "name": "value",
+                    "value": [
+                      {
+                        "annotationDescriptor": {
+                          "name": "org.springframework.data.web.SortDefault",
+                          "simpleName": "SortDefault",
+                          "annotationInfos": [
+                            {
+                              "name": "sort",
+                              "value": [
+                                {
+                                  "value": "id"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "value",
+                              "value": []
+                            },
+                            {
+                              "name": "caseSensitive",
+                              "value": true
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "listFilteredTrips",
+        "returnType": {
+          "flags": 112,
+          "name": "org.springframework.data.domain.Page",
+          "simpleName": "Page",
+          "typeArguments": [
+            {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.entities.Trip",
+              "simpleName": "Trip",
+              "typeArguments": []
+            }
+          ]
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/trips/pageFiltered"
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "method",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.filters.TripFilterVO",
+              "simpleName": "TripFilterVO",
+              "typeArguments": []
+            },
+            "name": "filter",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.RequestBody",
+                "simpleName": "RequestBody",
+                "annotationInfos": [
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          },
+          {
+            "type": {
+              "flags": 48,
+              "name": "org.springframework.data.domain.Pageable",
+              "simpleName": "Pageable",
+              "typeArguments": []
+            },
+            "name": "pageable",
+            "annotations": [
+              {
+                "name": "org.springframework.data.web.PageableDefault",
+                "simpleName": "PageableDefault",
+                "annotationInfos": [
+                  {
+                    "name": "page",
+                    "value": 0
+                  },
+                  {
+                    "name": "size",
+                    "value": 20
+                  },
+                  {
+                    "name": "value",
+                    "value": 10
+                  },
+                  {
+                    "name": "sort",
+                    "value": []
+                  }
+                ]
+              },
+              {
+                "name": "org.springframework.data.web.SortDefault.SortDefaults",
+                "simpleName": "SortDefaults",
+                "annotationInfos": [
+                  {
+                    "name": "value",
+                    "value": [
+                      {
+                        "annotationDescriptor": {
+                          "name": "org.springframework.data.web.SortDefault",
+                          "simpleName": "SortDefault",
+                          "annotationInfos": [
+                            {
+                              "name": "sort",
+                              "value": [
+                                {
+                                  "value": "id"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "value",
+                              "value": []
+                            },
+                            {
+                              "name": "caseSensitive",
+                              "value": true
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "count",
+        "returnType": {
+          "flags": 8,
+          "name": "long",
+          "simpleName": "long",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/trips/count"
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "method",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [],
+        "version": 0
+      },
+      {
+        "methodName": "countFilteredBy",
+        "returnType": {
+          "flags": 8,
+          "name": "long",
+          "simpleName": "long",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/trips/countFiltered"
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "method",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.filters.TripFilterVO",
+              "simpleName": "TripFilterVO",
+              "typeArguments": []
+            },
+            "name": "filter",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.RequestBody",
+                "simpleName": "RequestBody",
+                "annotationInfos": [
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "create",
+        "returnType": {
+          "flags": 8,
+          "name": "long",
+          "simpleName": "long",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/trips/create"
+                  }
+                ]
+              },
+              {
+                "name": "method",
+                "value": [
+                  {
+                    "enumDescriptor": {
+                      "value": "PUT"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.entities.Trip",
+              "simpleName": "Trip",
+              "typeArguments": []
+            },
+            "name": "trip",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.RequestBody",
+                "simpleName": "RequestBody",
+                "annotationInfos": [
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "update",
+        "returnType": {
+          "flags": 8,
+          "name": "long",
+          "simpleName": "long",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/trips/update"
+                  }
+                ]
+              },
+              {
+                "name": "method",
+                "value": [
+                  {
+                    "enumDescriptor": {
+                      "value": "PATCH"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.entities.Trip",
+              "simpleName": "Trip",
+              "typeArguments": []
+            },
+            "name": "trip",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.RequestBody",
+                "simpleName": "RequestBody",
+                "annotationInfos": [
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "delete",
+        "returnType": {
+          "flags": 0,
+          "name": "void",
+          "simpleName": "void",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": true,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/trips/{id}"
+                  }
+                ]
+              },
+              {
+                "name": "method",
+                "value": [
+                  {
+                    "enumDescriptor": {
+                      "value": "DELETE"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 51,
+              "name": "java.lang.Long",
+              "simpleName": "Long",
+              "typeArguments": []
+            },
+            "name": "id",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.PathVariable",
+                "simpleName": "PathVariable",
+                "annotationInfos": [
+                  {
+                    "name": "value",
+                    "value": "id"
+                  },
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "get",
+        "returnType": {
+          "flags": 48,
+          "name": "com.uc_mobileapps.examples.entities.Trip",
+          "simpleName": "Trip",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/trips/{id}"
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "method",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 51,
+              "name": "java.lang.Long",
+              "simpleName": "Long",
+              "typeArguments": []
+            },
+            "name": "id",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.PathVariable",
+                "simpleName": "PathVariable",
+                "annotationInfos": [
+                  {
+                    "name": "value",
+                    "value": "id"
+                  },
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      }
+    ],
+    "packageName": "com.uc_mobileapps.examples.rest",
+    "className": "TripController",
+    "generatorOptionsOfAnnotation": [],
+    "qualifiedName": "com.uc_mobileapps.examples.rest.TripController",
+    "version": 0
+  },
+  "com.uc_mobileapps.examples.rest.CustomerController": {
+    "sqlTablename": "",
+    "description": "",
+    "properties": [],
+    "methods": [
+      {
+        "methodName": "listCustomers",
+        "returnType": {
+          "flags": 112,
+          "name": "org.springframework.data.domain.Page",
+          "simpleName": "Page",
+          "typeArguments": [
+            {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.entities.Customer",
+              "simpleName": "Customer",
+              "typeArguments": []
+            }
+          ]
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/customers/page"
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "method",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 48,
+              "name": "org.springframework.data.domain.Pageable",
+              "simpleName": "Pageable",
+              "typeArguments": []
+            },
+            "name": "pageable",
+            "annotations": [
+              {
+                "name": "org.springframework.data.web.PageableDefault",
+                "simpleName": "PageableDefault",
+                "annotationInfos": [
+                  {
+                    "name": "page",
+                    "value": 0
+                  },
+                  {
+                    "name": "size",
+                    "value": 20
+                  },
+                  {
+                    "name": "value",
+                    "value": 10
+                  },
+                  {
+                    "name": "sort",
+                    "value": []
+                  }
+                ]
+              },
+              {
+                "name": "org.springframework.data.web.SortDefault.SortDefaults",
+                "simpleName": "SortDefaults",
+                "annotationInfos": [
+                  {
+                    "name": "value",
+                    "value": [
+                      {
+                        "annotationDescriptor": {
+                          "name": "org.springframework.data.web.SortDefault",
+                          "simpleName": "SortDefault",
+                          "annotationInfos": [
+                            {
+                              "name": "sort",
+                              "value": [
+                                {
+                                  "value": "id"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "value",
+                              "value": []
+                            },
+                            {
+                              "name": "caseSensitive",
+                              "value": true
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "count",
+        "returnType": {
+          "flags": 8,
+          "name": "long",
+          "simpleName": "long",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/customers/count"
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "method",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [],
+        "version": 0
+      },
+      {
+        "methodName": "create",
+        "returnType": {
+          "flags": 8,
+          "name": "long",
+          "simpleName": "long",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/customers/create"
+                  }
+                ]
+              },
+              {
+                "name": "method",
+                "value": [
+                  {
+                    "enumDescriptor": {
+                      "value": "PUT"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.entities.Customer",
+              "simpleName": "Customer",
+              "typeArguments": []
+            },
+            "name": "customer",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.RequestBody",
+                "simpleName": "RequestBody",
+                "annotationInfos": [
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "update",
+        "returnType": {
+          "flags": 8,
+          "name": "long",
+          "simpleName": "long",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/customers/update"
+                  }
+                ]
+              },
+              {
+                "name": "method",
+                "value": [
+                  {
+                    "enumDescriptor": {
+                      "value": "PATCH"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 48,
+              "name": "com.uc_mobileapps.examples.entities.Customer",
+              "simpleName": "Customer",
+              "typeArguments": []
+            },
+            "name": "customer",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.RequestBody",
+                "simpleName": "RequestBody",
+                "annotationInfos": [
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "delete",
+        "returnType": {
+          "flags": 0,
+          "name": "void",
+          "simpleName": "void",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": true,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/customers/{id}"
+                  }
+                ]
+              },
+              {
+                "name": "method",
+                "value": [
+                  {
+                    "enumDescriptor": {
+                      "value": "DELETE"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 51,
+              "name": "java.lang.Long",
+              "simpleName": "Long",
+              "typeArguments": []
+            },
+            "name": "id",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.PathVariable",
+                "simpleName": "PathVariable",
+                "annotationInfos": [
+                  {
+                    "name": "value",
+                    "value": "id"
+                  },
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      },
+      {
+        "methodName": "get",
+        "returnType": {
+          "flags": 48,
+          "name": "com.uc_mobileapps.examples.entities.Customer",
+          "simpleName": "Customer",
+          "typeArguments": []
+        },
+        "description": "",
+        "typeVoid": false,
+        "dataName": "",
+        "annotations": [
+          {
+            "name": "org.springframework.web.bind.annotation.RequestMapping",
+            "simpleName": "RequestMapping",
+            "annotationInfos": [
+              {
+                "name": "value",
+                "value": [
+                  {
+                    "value": "/v1/customers/{id}"
+                  }
+                ]
+              },
+              {
+                "name": "path",
+                "value": []
+              },
+              {
+                "name": "method",
+                "value": []
+              },
+              {
+                "name": "params",
+                "value": []
+              },
+              {
+                "name": "headers",
+                "value": []
+              },
+              {
+                "name": "consumes",
+                "value": []
+              },
+              {
+                "name": "produces",
+                "value": []
+              }
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "type": {
+              "flags": 51,
+              "name": "java.lang.Long",
+              "simpleName": "Long",
+              "typeArguments": []
+            },
+            "name": "id",
+            "annotations": [
+              {
+                "name": "org.springframework.web.bind.annotation.PathVariable",
+                "simpleName": "PathVariable",
+                "annotationInfos": [
+                  {
+                    "name": "value",
+                    "value": "id"
+                  },
+                  {
+                    "name": "required",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "version": 0
+          }
+        ],
+        "version": 0
+      }
+    ],
+    "packageName": "com.uc_mobileapps.examples.rest",
+    "className": "CustomerController",
+    "generatorOptionsOfAnnotation": [],
+    "qualifiedName": "com.uc_mobileapps.examples.rest.CustomerController",
+    "version": 0
+  }
+}

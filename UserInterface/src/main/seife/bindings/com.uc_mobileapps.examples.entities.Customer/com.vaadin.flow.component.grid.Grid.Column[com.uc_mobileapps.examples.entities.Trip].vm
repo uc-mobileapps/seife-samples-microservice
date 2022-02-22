@@ -1,0 +1,5 @@
+		${binding.attributeName} = addColumn(TemplateRenderer
+				.<Trip>of("<i>[[item.firstname]] [[item.lastname]]</i>")
+				.withProperty("firstname", trip -> trip.${binding.referredProperty.getter}().getFirstName())
+				.withProperty("lastname", trip -> trip.${binding.referredProperty.getter}().getLastName())
+		);

@@ -1,0 +1,5 @@
+		${binding.attributeName} = addColumn(TemplateRenderer
+				.<Trip>of("<span class=\"tertiary-text\">[[item.street]] [[item.houseNumber]]</span>")
+				.withProperty("street", trip -> trip.${binding.referredProperty.getter}().getStreet())
+				.withProperty("houseNumber", trip -> trip.${binding.referredProperty.getter}().getHouseNumber())
+		);
